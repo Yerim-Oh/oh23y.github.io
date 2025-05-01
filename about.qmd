@@ -14,10 +14,10 @@ Detail-oriented Statistics major (expected May 2025) with hands-on experience in
 
 ### Data Analysis & Modeling
 
--   Regression
--   Survey Sampling
--   Machine Learning
--   Statistical Modeling
+-   Regression  
+-   Survey Sampling  
+-   Machine Learning  
+-   Statistical Modeling  
 
 ### Technical Skills
 
