@@ -1,5 +1,5 @@
 ---
-title: "oh23y.github.io"
+title: "HOME"
 ---
 
 This is Yerim's website for STAT-244SC

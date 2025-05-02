@@ -11,11 +11,11 @@ website:
       - href: about.qmd
         text: About
       - href: stat244.qmd
-        text: STAT244
+        text: STAT244-SC
 
 format:
   html:
-    theme: cosmo
+    theme: sketchy
     css: styles.css
     toc: true
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT-244 – oh23y.github.io</title>
+<title>STAT-244-SC – oh23y.github.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./stat244.html" aria-current="page"> 
-<span class="menu-text">STAT244</span></a>
+<span class="menu-text">STAT244-SC</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -111,15 +111,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#final-project-report" id="toc-final-project-report" class="nav-link active" data-scroll-target="#final-project-report">Final Project Report</a>
+  <ul class="collapse">
+  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a>
+  <ul class="collapse">
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  </ul></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">STAT-244</h1>
+<h1 class="title">STAT-244-SC</h1>
 </div>
 
 
@@ -136,8 +149,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="final-project-report" class="level1">
+<h1>Final Project Report</h1>
+<ul>
+<li>May 1, 2025</li>
+<li>Eonbi Choi, Yerim Oh</li>
+</ul>
+<section id="datasets" class="level2">
+<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<p>The Formula 1 data used in this study are obtained from the f1dataR R package that accesses Formula 1 data via the FastF1 Python library. The dataset includes lap-by-lap session data from the 2024 Miami Grand Prix and comprise 1111 laps and 32 variables. These variables include driver details, lap times, pit in/out times, tire information, and track status.</p>
+<p><strong>Source</strong>: R Package ‘f1dataR’</p>
+<ul>
+<li><p><strong>Description</strong>: <a href="https://cran.r-project.org/web/packages/f1dataR/f1dataR.pdf" class="uri">https://cran.r-project.org/web/packages/f1dataR/f1dataR.pdf</a></p></li>
+<li><p><strong>Data sources</strong>: Obtain Formula 1 data via the unofficial API <a href="https://www.formula1.com/en/timing/f1-live" class="uri">https://www.formula1.com/en/timing/f1-live</a> via the ‘fastf1’ ‘Python’ library <a href="https://docs.fastf1.dev/" class="uri">https://docs.fastf1.dev/</a>.</p></li>
+<li><p>Last accessed date/time: April 28, 2025 16:51 PM</p></li>
+</ul>
+<section id="variables" class="level3">
+<h3 class="anchored" data-anchor-id="variables">Variables</h3>
+<p>quantitative variable:</p>
+<ul>
+<li><p><code>lap_time</code>: recorded time to complete a lap (seconds)</p></li>
+<li><p><code>lap_number</code>: lap number from which the telemetry data was recorded (number of laps)</p></li>
+<li><p><code>tyre_life</code>: number of laps completed on a set of tires (number of laps)</p></li>
+</ul>
+<p>categorical variable:</p>
+<ul>
+<li><p><code>compound</code>: type of tire used (SOFT, MEDIUM, HARD)</p></li>
+<li><p><code>pit_in</code>: whether a driver made a pit stop during a lap (binary: 0 = no pit stop, 1 = pit stop occured)</p></li>
+</ul>
+<section id="check-missing-values" class="level4">
+<h4 class="anchored" data-anchor-id="check-missing-values">Check missing values</h4>
+<p><img src="finalProject_images/missingData.png" class="img-fluid"></p>
+<p>Data for <code>lap_time</code> are missing 5 values which are less than 0.1% of the entire observation</p>
+</section>
+</section>
+</section>
+<section id="data-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
+<p>Scatter plot of <code>lap_num</code> vs.&nbsp;<code>pit_in</code> <img src="finalProject_images/ggplot.png" class="img-fluid"></p>
+<p>Relationship of <code>lap_number</code> and <code>pit_in</code> <img src="finalProject_images/barplot.png" class="img-fluid"></p>
+<p>Density plot of <code>lap_time</code> of each team <img src="finalProject_images/densityplot.png" class="img-fluid"></p>
+<p>Boxplot of <code>compound</code> vs.&nbsp;<code>tyre_life</code> <img src="finalProject_images/boxplot.png" class="img-fluid"></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
